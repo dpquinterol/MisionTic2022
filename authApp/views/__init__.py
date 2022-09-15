@@ -1,1 +1,2 @@
 from .crearusuarioview import CrearUsuarioView
+from .crearPsaludview import CrearPersonalSaludView

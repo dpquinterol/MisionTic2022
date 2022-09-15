@@ -1,4 +1,3 @@
-from dataclasses import fields
 from authApp.models.sig_vitales import Signos_vitales
 from rest_framework import serializers
 

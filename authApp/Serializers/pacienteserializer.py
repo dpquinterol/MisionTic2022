@@ -1,4 +1,3 @@
-from dataclasses import fields
 from authApp.models.paciente import Paciente
 from rest_framework import serializers
 

@@ -21,4 +21,5 @@ urlpatterns = [
     path('login/', TokenObtainPairView.as_view()),
     path('refresh/', TokenRefreshView.as_view()),
     path('user/', views.CrearUsuarioView.as_view()),
+    path('personalsalud/', views.CrearPersonalSaludView.as_view()),
 ]

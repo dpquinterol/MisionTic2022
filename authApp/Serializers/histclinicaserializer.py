@@ -1,4 +1,3 @@
-from dataclasses import fields
 from authApp.models.hist_clinica import Historia_clinica
 from rest_framework import serializers
 
