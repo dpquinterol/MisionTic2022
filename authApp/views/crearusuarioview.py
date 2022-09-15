@@ -13,7 +13,7 @@ class CrearUsuarioView(views.APIView):
 
         tokenData={
             "username":request.data["username"],
-            "password":request.data["password"]
+            "password":request.data["password"],
         }
 
         tokenSerializer= TokenObtainPairSerializer(data=tokenData)

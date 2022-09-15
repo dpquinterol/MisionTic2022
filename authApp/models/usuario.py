@@ -10,10 +10,20 @@ class UsuarioManager(BaseUserManager):
         user.self_password(password)
         user.save(using=self._db)
         return user
+        
+    def create_superuser(self, username, password):
 
+        user = self.create_user(
+        username=username,
+        password=password,
+        )
+        user.is_admin = True
+        user.save(using=self._db)
+        return user
 
 class Usuario(AbstractBaseUser,PermissionsMixin):
-    username=models.CharField(primary_key=True,max_length=15, unique=True)
+    id=models.BigAutoField(primary_key=True)
+    username=models.CharField('Username',max_length=15, unique=True)
     password=models.CharField('Password', max_length=256)
     perfil=models.CharField('Perfil',max_length=30)
     nombre=models.CharField('Nombre',max_length=35)
