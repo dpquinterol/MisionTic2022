@@ -4,4 +4,4 @@ from rest_framework import serializers
 class HistoriaClinicaSeralizer(serializers.ModelSerializer):
     class Meta:
         model=Historia_clinica
-        fields='__all__'
+        fields=('id_paciente','sugerencias','diagnostico','entorno','fecha_sugerencia','descipcion')
