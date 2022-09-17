@@ -20,6 +20,17 @@ from authApp import views
 urlpatterns = [
     path('login/', TokenObtainPairView.as_view()),
     path('refresh/', TokenRefreshView.as_view()),
-    path('user/', views.CrearUsuarioView.as_view()),
-    path('personalsalud/', views.CrearPersonalSaludView.as_view()),
+    path('usercrear/', views.CrearUsuarioView.as_view()),
+    path('user/<int:pk>', views.UsuarioView.as_view()),
+    path('personalsaludCrear/', views.CrearPersonalSaludView.as_view()),
+    path('personalsalud/<int:pk>', views.PersonalSaludView.as_view()),
+    path('familiarcrear/', views.CrearFamiliarView.as_view()),
+    path('familiar/<int:pk>',views.FamiliarView.as_view()),
+    path('historiacrear/', views.CrearHistoriaClinicaView.as_view()),
+    path('historia/<int:pk>',views.HistoriaClinicaView.as_view()),
+    path('pacientecrear/', views.CrearPacienteView.as_view()),
+    path('paciente/<int:pk>',views.PacienteView.as_view()),
+    path('signoscrear/', views.CrearSignosVitalesView.as_view()),
+    path('signos/<int:pk>',views.SignosVitalesView.as_view()),
+
 ]
