@@ -22,6 +22,7 @@ class CrearUsuarioView(views.APIView):
         return Response(tokenSerializer.validate_data, status=status.HTTP_201_CREATED)
 
 from authApp.models.usuario import Usuario
+
 class UsuarioView(views.APIView):
     def get(self, request, pk, format=None):
         model=Usuario.objects.get(pk=pk)
